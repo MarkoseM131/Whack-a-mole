@@ -1,6 +1,7 @@
 const moles = document.querySelectorAll('.mole');
 const scoreDisplay = document.querySelector('.score');
 const restartButton = document.querySelector('.restart');
+const winMessage = document.querySelector('h2');
 
 let score = 0;
 let activeMole = null;
@@ -23,6 +24,10 @@ moles.forEach((mole, index) => {
             scoreDisplay.textContent = `Score: ${score}`;
             moles[index].classList.remove('active');
             activeMole = null;
+
+            if (score >= 5) {
+                winMessage.textContent = 'You Win';
+            }
         }
     });
 });
@@ -30,6 +35,7 @@ moles.forEach((mole, index) => {
 function startGame() {
     score = 0;
     scoreDisplay.textContent = 'Score: 0';
+    winMessage.textContent = '';
     if (gameInterval) clearInterval(gameInterval);
     gameInterval = setInterval(activateRandomMole, 1000);
 }
