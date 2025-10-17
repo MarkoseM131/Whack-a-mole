@@ -1,0 +1,50 @@
+body {
+    background-color: #f0f8ff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.score {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.game-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.mole {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #8b4513;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.restart {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: rgb(55, 147, 55);
+    font-weight: bold;
+}
+
+.active {
+    background-color: green !important;
+}
